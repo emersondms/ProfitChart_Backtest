@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>868,741</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>674,741</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -122,36 +122,38 @@
           <av:PointCollection x:Key="ConnectorLocation">300,293 300,334.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Get performance data" sap:VirtualizedContainerService.HintSize="745,1767" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <Sequence DisplayName="Execute the backtest " sap:VirtualizedContainerService.HintSize="476,381" sap2010:WorkflowViewState.IdRef="Sequence_6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'ProfitPro Tprofitch'" sap:VirtualizedContainerService.HintSize="703,1675" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="e0b933bbf95969cea46510c283e950d3" Selector="&lt;wnd app='profitchart.exe' cls='TProfitChartForm' omit:title='ProfitPro - 5.0.0.118 - Registrado - [Itausa PN N1 - Dia(s) - 10*' /&gt;">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'ProfitPro Tprofitch'" sap:VirtualizedContainerService.HintSize="434,289" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="e0b933bbf95969cea46510c283e950d3" Selector="&lt;wnd app='profitchart.exe' cls='TProfitChartForm' omit:title='ProfitPro - 5.0.0.118 - Registrado - [Itausa PN N1 - Dia(s) - 10*' /&gt;">
           <ui:WindowScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="669,1529" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InterruptibleDoWhile Condition="[(not endReached) and isInternetConnected]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="627,1437" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+                <ui:InterruptibleDoWhile Condition="[(not endReached) and isInternetConnected]" DisplayName="Run the backtest for all stocks from the dropdown" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
                   <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="591,1272" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="549,517" sap2010:WorkflowViewState.IdRef="Sequence_25">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Check if the internet is connected" sap:VirtualizedContainerService.HintSize="549,445" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                      <Sequence DisplayName="Check if the internet is connected" sap:VirtualizedContainerService.HintSize="507,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -176,14 +178,14 @@
                           </If.Then>
                         </If>
                       </Sequence>
-                      <Sequence DisplayName="Select stock" sap:VirtualizedContainerService.HintSize="549,604" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <Sequence DisplayName="Select stock" sap:VirtualizedContainerService.HintSize="507,66" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="700" DisplayName="Click stocks dropdown " sap:VirtualizedContainerService.HintSize="507,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="700" DisplayName="Click stocks dropdown " sap:VirtualizedContainerService.HintSize="507,51" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition OffsetX="45" OffsetY="14" Position="TopLeft" />
                           </ui:Click.CursorPosition>
@@ -197,6 +199,12 @@
                               </ui:Target.WaitForReady>
                             </ui:Target>
                           </ui:Click.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </ui:Click>
                         <If Condition="[isFirstIt]" DisplayName="Check if it's the first iteration" sap:VirtualizedContainerService.HintSize="507,213" sap2010:WorkflowViewState.IdRef="If_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -216,7 +224,7 @@
                             </Assign>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                            <Sequence DisplayName="Select the next stock from the dropdown" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_22">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -274,22 +282,22 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:GetValue>
                       </Sequence>
-                      <If Condition="[not stockName = previousStock]" DisplayName="Check if it reached the end of stocks list" sap:VirtualizedContainerService.HintSize="549,51" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If Condition="[not stockName = previousStock]" DisplayName="If not reached the end" sap:VirtualizedContainerService.HintSize="507,213" sap2010:WorkflowViewState.IdRef="If_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                          <Sequence DisplayName="Get the backtest result" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:GetOCRText Text="{x:Null}" WordsInfo="{x:Null}" DisplayName="Extract performance text" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
+                            <ui:GetOCRText Text="{x:Null}" WordsInfo="{x:Null}" DisplayName="Extract performance text" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
                               <ui:GetOCRText.OCREngine>
                                 <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                                   <ActivityFunc.Argument>
@@ -310,12 +318,12 @@
                               </ui:GetOCRText.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:GetOCRText>
-                            <ui:MultipleAssign DisplayName="Extract  profit factor" sap:VirtualizedContainerService.HintSize="334,191" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                            <ui:MultipleAssign DisplayName="Extract  profit factor" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
                               <ui:MultipleAssign.AssignOperations>
                                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -352,8 +360,14 @@
                                   </ui:AssignOperation>
                                 </scg:List>
                               </ui:MultipleAssign.AssignOperations>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
                             </ui:MultipleAssign>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{stockName, profitFactor}]" DataTable="[dtOut]" DisplayName="Save result row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{stockName, profitFactor}]" DataTable="[dtOut]" DisplayName="Save result row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
                           </Sequence>
                         </If.Then>
                         <If.Else>
@@ -369,6 +383,12 @@
                       </If>
                     </Sequence>
                   </ui:InterruptibleDoWhile.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </ui:InterruptibleDoWhile>
               </Sequence>
             </ActivityAction>
@@ -383,7 +403,7 @@
               <av:Size x:Key="ShapeSize">200,51</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtOut]" DisplayName="Write to Excel" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[sheetName]" WorkbookPath="[excelPath]" />
+          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtOut]" DisplayName="Write results to Excel" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[sheetName]" WorkbookPath="[excelPath]" />
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
