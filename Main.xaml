@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>624,741</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>868,741</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -101,11 +101,7 @@
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="endReached" />
       <Variable x:TypeArguments="x:String" Name="previousStock" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="isFirstIt" />
-      <Variable x:TypeArguments="x:Boolean" Name="isInternetConnected">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="isInternetConnected" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -144,7 +140,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="627,1437" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+                <ui:InterruptibleDoWhile Condition="[(not endReached) and isInternetConnected]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="627,1437" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
                   <ui:InterruptibleDoWhile.Body>
                     <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="591,1272" sap2010:WorkflowViewState.IdRef="Sequence_25">
                       <sap:WorkflowViewStateService.ViewState>
@@ -373,9 +369,6 @@
                       </If>
                     </Sequence>
                   </ui:InterruptibleDoWhile.Body>
-                  <ui:InterruptibleDoWhile.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="(not endReached) and isInternetConnected" />
-                  </ui:InterruptibleDoWhile.Condition>
                 </ui:InterruptibleDoWhile>
               </Sequence>
             </ActivityAction>
